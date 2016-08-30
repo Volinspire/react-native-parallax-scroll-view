@@ -95,6 +95,7 @@ class ParallaxScrollView extends Component {
       <View style={[style, styles.container]}
             onLayout={(e) => this._maybeUpdateViewDimensions(e)}>
         { background }
+        { maybeStickyHeader }
         {
           React.cloneElement(scrollElement, {
               ref: SCROLLVIEW_REF,
@@ -107,7 +108,6 @@ class ParallaxScrollView extends Component {
             footerSpacer
           )
         }
-        { maybeStickyHeader }
       </View>
     );
   }
